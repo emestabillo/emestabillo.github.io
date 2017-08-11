@@ -1,59 +1,250 @@
+<!DOCTYPE html>
+
 <html>
 	<head>
 
-		<style>
-			body {
-				background:  url('bg.jpg') no-repeat center center fixed; 
-				  -webkit-background-size: cover;
-				  -moz-background-size: cover;
-				  -o-background-size: cover;
-				  background-size: cover;
-			} 
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i" rel="stylesheet">
 
-			h1 {
-				color: white;
-				font-family: 'Helvetica Neue', Helvetica;
-				font-weight: 100;
-				font-size: 60px;
-				margin: 0px;
-			}
-			p {
-				color: white;
-				font-family: 'Helvetica Neue', Helvetica;
-				font-weight: 200;
-			}
-			.box {
-				background-color: rgba(59,104,122,0.5);
-				padding: 20px;
-				width: 300px;
-				margin: 100px auto;
-				text-align: center;
-			}
-		</style>
-		
+	<link 
+      rel="stylesheet" 
+      href="prism-atom-dark.css" 
+      type="text/css" 
+      media="screen" 
+    />
+
+    <script type="text/javascript" src="prism.js"></script>
+    <script type="text/javascript" src="prism.ruby.js"></script>
+
+    <title>Emmilie Estabillo</title>
+
+    <meta name="description" content="Emmilie Estabillo is a professional 
+          software engineer specializing in full-stack development.
+          She has relevant experience with Ruby, Rails, JavaScript, 
+          and building web applications.">
+
 	</head>
 
 	<body>
-		<div class="box">
+
+	 <div class="about-container">
+
+	  <ul>
+     <li><a href="#" class="nav-link">About</a></li>
+   <li><a href="#code-samples" class="nav-link">CODE SAMPLES</a></li>
+  <li><a href="#web-apps" class="nav-link">WEB APPS</a></li>
+  <li><a href="#skills-and-tools" class="nav-link">SKILLS &amp; TOOLS</a></li>
+  <li class="hire-me"><a href="#hire-me" class="nav-link">HIRE ME</a></li>
+  </ul>
+
+		<div class="about">
+			<img src="me.jpg" class="me" />
+
+		
 			<h1>Emmilie Estabillo</h1>
 
-			<p>
-				<i>Coding Student</i>
+			<h2>RAILS DEVELOPER</h2>
+
+			<hr class="gray"/>
+		
+
+			<p class="bio"> I am passionate about coding and learning new things. 
 			</p>
-
-			<p> Learning how to code through the Firehose Project. 
-			</p>
-
-			<br />
-			<br />
-			<br />
-
-			<a href="https://github.com/emestabillo">
-				<img src="github.png" />
-			</a>
 			
 		</div>
+	  </div>
 
+	  <h3 id="code-samples">Code Snippets</h3>
+
+	  <hr class="yellow">
+	  
+	  <div class="box">
+  		 <h4>Temperature Conversion</h4>
+      <p>
+        This ruby program will prompt the user for a temperature 
+        in degrees Celsius and let the user know what the 
+        corresponding temperature is in Fahrenheit.
+      </p>
+	  </div>
+
+	  <div class="box">
+	  <pre><code class="language-ruby">
+puts &quot;Enter a value for Celsius:&quot;
+num = gets.to_i
+
+def temperature(x)
+   return x * (1.8) + 32
+end
+
+text = &quot;The temperature is also equivalent to #{temperature(num)} Fahrenheit.&quot;
+puts text
+			</code></pre>
+	  </div>
+
+	  <br class="clear" />
+
+	  <div class="box">
+	  <pre><code class="language-ruby">
+puts "Enter a Number"
+input = gets.chomp.to_i
+
+rank = input % 10 
+
+  if input == 11 || input == 12 || input == 13
+    puts "That is the #{input}th item!"   
+  elsif rank == 1
+    puts "That is the #{input}st item!"
+  elsif rank == 2
+    puts "That is the #{input}nd item!"
+  elsif rank == 3
+    puts "That is the #{input}rd item!"
+  else
+    puts "That is the #{input}th item!"  
+  end</code></pre>
+	  </div>
+
+	  <div class="box">
+  		<h4>Ordinal Challenge</h4>
+ 		<p>
+    This ruby program will convert a plain number
+    to the ordinal of the number. So for example,
+    if the user enters 2, it will display 2nd, if
+    the user enters 3, it will display 3rd, etc.
+  		</p>
+	  </div>
+
+	  <br class="clear" />
+	  <div class="box">
+  		<h4>Foobar</h4>
+  <p>
+    This ruby program is an adaptation of a classic technical 
+    interview problem which displays sequences 
+    of the Foobar pattern.
+  </p>
+	  </div>
+
+	  <div class="box">
+ 		<pre><code class="language-ruby">
+      puts &quot;How many items do you want to see?&quot;
+      input = gets.chomp.to_i
+
+      (1..input).each do |n|
+        if n % 3 == 0
+          puts &quot;Foo&quot;
+        elsif n % 5 == 0
+          puts &quot;Bar&quot;
+        elsif n % 15 == 0
+          puts &quot;Foobar&quot;
+        else 
+          puts n
+        end
+      end</code></pre>
+	  </div>
+
+	  <br class="clear" />
+	
+	<h3 id="web-apps">Web Apps</h3>
+	<hr class="yellow" />
+
+	<div class="box">
+  <h4>Quote Generator</h4>
+  <img src="splurty2.png" class="full-width" />
+  <p>
+        A database-powered quote generator with a mobile-first
+        design, using the Ruby on Rails framework, HTML, and CSS.
+        Uses Git and GitHub for version control, and launched
+        on Heroku.
+  </p>
+</div>
+
+<div class="box">
+  <h4>Yelp Clone</h4>
+  <img src="nomster5.png" class="full-width" />
+  <p>
+    A Yelp clone that integrates with the Google Maps API 
+    and includes features like user comments, star ratings,
+    image uploading, and user authentication.
+  </p>
+</div>
+<br class="clear" />
+
+<div class="box">
+  <h4>Two-Sided Market Place</h4>
+  <img src="flixter7.png" class="full-width" />
+  <p>
+    A two-sided, video-streaming marketplace platform that
+    features credit card payment capabilities, user role
+    management, complex user interfaces, and advanced
+    database relationships.
+  </p>
+</div>
+<div class="box">
+  <h4>Test Driven Development</h4>
+  <img src="gram6.png" class="full-width" />
+  <p>
+    An Instagram clone that was built using industry-standard, test-driven
+    development following numerous red/green/refactor cycles.
+  </p>
+</div>
+<br class="clear" />
+<div class="box">
+  <h4>Single Page Todo Application</h4>
+  <img src="todoster.png" class="full-width" />
+  <p>
+    This single-page to-do application features a
+    fluid user interface that– by using JavaScript–
+    allows users to rapidly add dynamic content.
+  </p>
+</div>
+<div class="box">
+  <h4>Agile Team Project</h4>
+  <img src="chess.png" class="full-width" />
+  <p>
+    Worked on an Agile software development team building
+    a chess application. Under the guidance of a senior software engineer,
+    we had weekly Agile team meetings for code reviews, sprint planning,
+    and feature assignments.
+  </p>
+</div>
+<br class="clear" />
+
+<h3 id="skills-and-tools">Skills &amp; Tools</h3>
+<hr class="yellow" />
+<p class="skills-and-tools">
+<p>
+  Emmilie has developed proficiency and expertise 
+  in the following programming languages and 
+  comfort with the following tools.
+</p>
+
+<div class="icons">
+	
+<img src="github.png" class="icon" />
+  <img src="rubocop.png" class="icon" />
+  <img src="trello.png" class="icon" />
+  <img src="slack.png" class="icon" />
+  <img src="codeship.png" class="icon" />
+
+  <br class="clear" />
+  <img src="skills.png" class="icon"/>
+</div>
+
+<div class="contact-me" id="hire-me">
+	<h3 class="contact-headline">Contact</h3>
+	<hr class="yellow" />
+	<p class="contact-info">
+    Currently entertaining new opportunities.
+    Please get in touch via email:
+  </p>
+
+  <p>
+    <a href="mailto:"emsestabillo@gmail.com" class="contact-link">
+      emsestabillo@gmail.com
+    </a>
+  </p>
+
+
+</div>
 	</body>
 
 </html>
