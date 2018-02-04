@@ -129,12 +129,12 @@ rank = input % 10
       input = gets.chomp.to_i
 
       (1..input).each do |n|
-        if n % 3 == 0
-          puts &quot;Foo&quot;
+        if n % 15 == 0
+          puts &quot;Foobar&quot;
+	elsif n % 3 == 0
+	  puts &quot;Foo&quot;
         elsif n % 5 == 0
           puts &quot;Bar&quot;
-        elsif n % 15 == 0
-          puts &quot;Foobar&quot;
         else 
           puts n
         end
